@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Login System</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/normalize.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+
+</head>
+<body>
+<nav class="navbar">
+  <div class="navdiv">
+    <div class="logo"><a href="{{ url_for('home') }}">FlaskProject</a></div>
+    <ul>
+      <button type="button" class="btn--main" onclick="location.href='{{ url_for('home')}}'">Home</button>
+      <button type="button" class="btn--main" onclick="location.href='{{ url_for('about')}}'">About</button>
+      <button type="button" class="btn--main" onclick="location.href='{{ url_for('contact')}}'">Contact</button>
+      <button type="button" class="btn--acc" onclick="location.href='{{ url_for('loginuser')}}'">Login</button>
+      <button type="button" class="btn--acc" onclick="location.href='{{ url_for('register')}}'">Register</button>
+    </ul>
+
+  </div>
+
+</nav>
+  {% block content %}
+    {# Template inserted here #}
+  {% endblock %}
+
+  <script src="{{ url_for('static', filename='/js/jquery.js') }}"></script>
+  <script src="{{ url_for('static', filename='/js/scripts.js') }}"></script>
+
+</body>
+</html>
