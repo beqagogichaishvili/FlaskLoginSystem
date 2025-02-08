@@ -1,7 +1,6 @@
 from flask import render_template
 from flaskapp import app, login_required
 from flaskapp.user.routes import *
-from flaskapp.user.models import *
 
 @app.route('/')
 def home():
